@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Task Details">
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-combobox
+                name="employeeName"
+                label="Select Employee"
+                value={selectedEmployee}
+                options={employeeOptions}
+                onchange={handleEmployeeChange}>
+                </lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item size="3" padding="around-small" if:true={isEmployeeSelected} >
+                <lightning-combobox
+                    name="monthFilter"
+                    label="Select Month"
+                    value={selectedMonth}
+                    options={filterOptions}
+                    onchange={handleMonthChange}>
+                </lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button 
+                if:true={isMonthSelected}
+                label="Download Report" 
+                onclick={downloadReport} 
+                class="slds-m-top_medium"
+          ></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <template if:true={visibleTasks.length}>
+            <lightning-datatable
+                key-field="Id"
+                data={visibleTasks}
+                columns={columns}
+                hide-checkbox-column
+                show-row-number-column>
+            </lightning-datatable>
+        </template>
+        <template if:true={taskList.error}>
+            <div class="slds-text-color_error">{taskList.error.body.message}</div>
+        </template>
+        <div slot="footer" class="slds-var-m-horizontal_medium">
+            <c-pagination records={taskList.data} record-size="7" onupdate={updateTaskHandler}></c-pagination>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-grid slds-wrap slds-grid_align-center">
+        <button class="slds-button slds-button_destructive"
+            if:true={isButtonVisible} 
+            title="For Completion your Attendence Click Here!!"
+            onclick={handleCheckOut} 
+            disabled={isOnLeave}
+         >Check Out</button>
+    </div>
+</template>

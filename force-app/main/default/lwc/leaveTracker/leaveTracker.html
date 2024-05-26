@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Leave Request Details">
+        <lightning-datatable 
+        key-field="Id"
+        data={visibleLeaves}
+        columns={columns}
+        hide-checkbox-column
+        show-row-number-column
+        row-class-name={getRowClass}
+        >
+        </lightning-datatable>
+        <div slot="footer" class="slds-var-m-horizontal_medium">
+            <c-pagination records={leaveList.data} record-size="7" onupdate={updateLeaveHandler}></c-pagination>
+        </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,25 @@
+<template>
+  <div class="slds-grid slds-gutters"> 
+    <div class="slds-col">
+      <div class="slds-grid slds-wrap slds-grid_align-center">
+        <button class="slds-button slds-button_success"
+            if:true={isButtonVisible}
+            title="For giving Attendence Click Here!!!!" 
+            onclick={handleCheckIn}
+            disabled={isOnLeave} 
+          >Check In</button> 
+          <button class="slds-button slds-button_brand"
+            title="For Creating Task Click Here!!!!" 
+            onclick={handleCreateTask} 
+            disabled={isOnLeave}
+          > Create Task</button> 
+          <c-final-submission></c-final-submission> 
+        <button class="slds-button slds-button_brand"
+            title="For Giving Leave Request Click Here!!!"
+            onclick={createLeaveRequest}
+            disabled={isOnLeave}
+          > Leave Request</button>
+        </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain__c</fullName>
+    <externalId>false</externalId>
+    <label>Domain</label>
+    <required>true</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Data Science/Data Analyst</fullName>
+                <default>false</default>
+                <label>Data Science/Data Analyst</label>
+            </value>
+            <value>
+                <fullName>Java(Full Stack)</fullName>
+                <default>false</default>
+                <label>Java(Full Stack)</label>
+            </value>
+            <value>
+                <fullName>Mern Stack</fullName>
+                <default>false</default>
+                <label>Mern Stack</label>
+            </value>
+            <value>
+                <fullName>Python</fullName>
+                <default>false</default>
+                <label>Python</label>
+            </value>
+            <value>
+                <fullName>Salesforce Developer</fullName>
+                <default>false</default>
+                <label>Salesforce Developer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
