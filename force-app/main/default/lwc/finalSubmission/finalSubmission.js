@@ -10,7 +10,7 @@ import hasApprovedLeave from '@salesforce/apex/checkInController.hasApprovedLeav
 
 export default class FinalSubmission extends LightningElement {
 @track recordId;
-@api errorMessage;
+@api errorMessage; 
 @api userId;
 @track isOnLeave = false;    // Define a property to track button visibility
 isButtonVisible = false;

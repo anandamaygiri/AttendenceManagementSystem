@@ -42,7 +42,7 @@ export default class AddAttendence extends NavigationMixin(LightningElement) {
 
         const endTime = new Date(); // Replace this with your desired end time
         endTime.setHours(20); // Example: 5 PM
-        endTime.setMinutes(45);
+        endTime.setMinutes(45); 
         endTime.setSeconds(0);
 
         // Check if the current time is within the defined time period

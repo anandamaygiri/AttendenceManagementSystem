@@ -8,7 +8,7 @@ public  class checkOutController {
             if(attList.size()>0){
                 att = attList[0];
                 att.CheckOutTime__c = DateTime.now();
-                upsert att;
+                upsert att; 
             }
             
         }

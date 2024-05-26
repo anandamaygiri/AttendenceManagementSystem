@@ -125,7 +125,7 @@ export default class TaskDetails extends LightningElement {
 
         let element = 'data:application/vnd.ms-excel,' + encodeURIComponent(table);
         let downloadElement = document.createElement('a');
-        downloadElement.href = element;
+        downloadElement.href = element; 
         downloadElement.target = '_self';
         downloadElement.download = 'Task Data.xls';
 

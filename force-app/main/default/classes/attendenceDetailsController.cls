@@ -3,7 +3,7 @@ public class attendenceDetailsController {
   public static List<Attendence_Details__c> getAttendence() {
     return [
       SELECT
-        Id,
+        Id, 
         Name,
         Employee_Name__c,
         CheckInTime__c,
