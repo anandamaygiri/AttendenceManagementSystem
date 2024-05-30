@@ -1,0 +1,68 @@
+<template>
+    <lightning-card title="Daily Reports">
+        <lightning-layout>
+            <lightning-layout-item size="3" padding="around-small">
+                <lightning-combobox
+                name="Domain"
+                lebel="Select Domain"
+                value={selectedDomain}
+                placeholder="Choose Option"
+                options={domainOptions}
+                onchange={handleDomainChange}
+            >  
+            </lightning-combobox>
+       </lightning-layout-item>
+       <lightning-layout-item size="3" padding="around-small" if:true={selectedDomain}>
+        <lightning-combobox
+            name="filterBy"
+            label="Filter By"
+            value={filterBy}
+            placeholder="Select an Option"
+            options={filterByOptions}
+            onchange={filterByHandler}
+        >
+        </lightning-combobox>
+    </lightning-layout-item>
+
+    <lightning-layout-item size="4" padding="around-small">
+        <template if:true={filterBy}>
+            <template if:true={isFilterSelectedMonth}>
+                <lightning-combobox
+                    name="monthFilter"
+                    label="Select Month"
+                    value={selectedMonth}
+                    options={filterOptions}
+                    onchange={handleMonthChange}
+                >
+                </lightning-combobox>
+            </template>
+            <template if:false={isFilterSelectedMonth}>
+                <lightning-input
+                    type={inputType}
+                    label="Filter Value"
+                    value={filterValue}
+                    onchange={filterHandler}
+                >
+                </lightning-input>
+            </template>
+        </template>
+    </lightning-layout-item>
+    <lightning-layout-item size="3" padding="around-small" if:true={filterBy}>
+        <lightning-button
+            label="Download Report"
+            onclick={downloadReport}
+            class="slds-m-top_medium"
+        >
+        </lightning-button>
+    </lightning-layout-item>
+        </lightning-layout>
+         
+            <lightning-datatable
+                key-field="Id"
+                data={filteredReportsData}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable> 
+         
+    </lightning-card>
+</template>
