@@ -1,6 +1,6 @@
 public class GlobalReportsController {
     @AuraEnabled(cacheable=true)
-    public static List<Map<String,Object>>  getDailyReports() {
+    public static List<Map<String,Object>>  getGlobalReports() {
         Map<Date,Map<String,Object>> DateToRecordMap = new Map<Date,Map<String,Object>>();
         
         // Query Attendance Details 

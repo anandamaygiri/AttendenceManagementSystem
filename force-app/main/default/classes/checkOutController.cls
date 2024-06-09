@@ -9,7 +9,7 @@ public  class checkOutController {
                 att = attList[0];
                 att.CheckOutTime__c = DateTime.now();
                 upsert att; 
-            }
+            } 
             
         }
         catch(Exception e){

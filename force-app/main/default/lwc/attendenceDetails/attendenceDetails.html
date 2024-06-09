@@ -11,15 +11,16 @@
                  onchange={filterByHandler}
                  ></lightning-combobox>
         </lightning-layout-item>
+        <template if:true={filterBy}> 
             <lightning-layout-item size="4" padding="around-small">
-                <template if:true={filterBy}>
                     <lightning-input
                         type={inputType}
                         label="Filter Value"
+                        value={filterValue}
                         onchange={filterHandler}>
                     </lightning-input>
-                </template>
         </lightning-layout-item>
+    </template>
         <lightning-layout-item>
             <lightning-button
             if:true={isFilterSelected}

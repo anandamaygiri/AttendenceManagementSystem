@@ -1,16 +1,16 @@
 import { LightningElement ,track,api,wire } from 'lwc';
 import checkOut from '@salesforce/apex/checkOutController.checkOut';
-import getAttendenceDetails from '@salesforce/apex/checkOutController.getAttendenceDetails';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import {refreshApex} from '@salesforce/apex';
 import userId from '@salesforce/user/Id';
 import profile from '@salesforce/schema/User.Profile.Name';
 import hasApprovedLeave from '@salesforce/apex/checkInController.hasApprovedLeave';
+import getAttendenceDetails from '@salesforce/apex/checkOutController.getAttendenceDetails';
 
 export default class FinalSubmission extends LightningElement {
 @track recordId;
-@api errorMessage; 
+@api errorMessage;  
 @api userId;
 @track isOnLeave = false;    // Define a property to track button visibility
 isButtonVisible = false;

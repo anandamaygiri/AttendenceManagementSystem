@@ -1,5 +1,5 @@
 import { LightningElement,api,track,wire} from 'lwc';
-import getDailyReports from '@salesforce/apex/GlobalReportsController.getDailyReports';
+import getGlobalReports from '@salesforce/apex/GlobalReportsController.getGlobalReports';
 import userId from '@salesforce/user/Id';
 import profile from '@salesforce/schema/User.Profile.Name';
 
@@ -52,6 +52,7 @@ typeAttributes:{
         year:'numeric'}},
     {label: "Total Leave",fieldName: "Count_Leave_Day__c"},
     {label: "Leave Approval Status",fieldName: "Approval_Status__c"}
+ 
 ];
 
 const monthOptions = [
@@ -76,12 +77,14 @@ export default class GlobalReports extends LightningElement {
     @track reportsData =  [];
     selectedDomain='';
     @track filteredReportsData=[];
-    filterBy =''
-    filterValue =''
+    @track filterBy =''
+    @track filterValue =''
     filterOptions = monthOptions;
     @track isFilterSelected=false;
     @track isFilterSelectedMonth=false
-    @track selectedMonth = '';
+    @track selectedMonth = ''; 
+    @track employeeOptions=[];
+    @track suggestedEmployeeNames = [];
     
     
     domainOptions=[
@@ -92,8 +95,8 @@ export default class GlobalReports extends LightningElement {
         {label:'Salesforce',value:'Salesforce'}   
     ];
 
-    @wire(getDailyReports, {recordId: '$user_Id', fields: [profile] })
-    wiredDailyReports({ data, error }) { 
+    @wire(getGlobalReports, {recordId: '$user_Id', fields: [profile] })
+    wiredGlobalReports({ data, error }) { 
         if (data) {
             this.reportsData = data.map(record =>{
                 let result = {
@@ -116,28 +119,55 @@ export default class GlobalReports extends LightningElement {
                 return result;
             }) ;
             this.filteredReportsData = [...this.reportsData];
+            this.suggestEmployeeNames();
         } else if (error) {
             console.error('Error fetching reports:', error);
         }
 
     }
-     
+   /* extractEmployeeNames() {
+        const domainFilteredReports = this.filteredReportsData.filter(record => record.Domain__c === this.selectedDomain);
+        const uniqueNames = new Set(domainFilteredReports.map(record => record.Employee_Name__c));
+        
+    }*/
+    suggestEmployeeNames() {
+        const value = this.filterValue.toLowerCase();
+        const uniqueNames = new Set(this.filteredReportsData.map(record => record.Employee_Name__c));
+        this.employeeOptions = Array.from(uniqueNames).map(name => ({ label: name, value: name }));
+        this.suggestedEmployeeNames = this.employeeOptions.filter(option =>
+            option.label.toLowerCase().includes(value)
+        );
+    }
     handleDomainChange(event){
         this.selectedDomain = event.detail.value;
-        this.filterReportsData();
+       // this.filterReportsData();
         
     }
     handleMonthChange(event) {
         this.selectedMonth = event.detail.value;
         this.filterReportsData();
+        this.isFilterSelected = true;
     }
     filterByHandler(event) {
         this.filterBy = event.detail.value;
-        this.filterValue = '';
+        this.filterValue = '' ;
         this.isFilterSelectedMonth = this.filterBy === 'selectedMonth';
+        
+         
     }
     filterHandler(event) {
         this.filterValue = event.target.value;
+        if (this.filterBy === 'Employee_Name__c') {
+            this.suggestEmployeeNames();
+        }
+        //this.filterReportsData();
+       
+    }
+    
+    handleSuggestionSelecect(event) {
+        this.filterValue = event.currentTarget.textContent;
+        this.suggestedEmployeeNames = [];
+        this.isFilterSelected = true;
         this.filterReportsData();
     }
     filterReportsData() {
@@ -175,6 +205,9 @@ export default class GlobalReports extends LightningElement {
 
     get inputType() {
         return this.isFilterSelectedMonth ? 'combobox' : 'text';
+    }
+    get suggestedEmployeeNames(){
+        return this.filterBy === 'Employee_Name__c' && this.filterValue;
     }
     
     downloadReport() {

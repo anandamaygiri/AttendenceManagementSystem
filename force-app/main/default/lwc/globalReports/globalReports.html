@@ -1,6 +1,6 @@
 <template>
-    <lightning-card title="Daily Reports">
-        <lightning-layout>
+    <lightning-card title="Global Reports">
+         
             <lightning-layout-item size="3" padding="around-small">
                 <lightning-combobox
                 name="Domain"
@@ -44,10 +44,20 @@
                     onchange={filterHandler}
                 >
                 </lightning-input>
+                <template if:true={suggestedEmployeeNames}>
+                     
+                    <template if:true={filterValue} for:each={suggestedEmployeeNames} for:item="suggestion">
+                        <div key={suggestion.value} class="slds-p-around_small slds-box slds-theme_default" onclick={handleSuggestionSelecect}>
+                            {suggestion.label}
+                        </div>
+                    </template>
+                
+           </template>
             </template>
         </template>
     </lightning-layout-item>
-    <lightning-layout-item size="3" padding="around-small" if:true={filterBy}>
+    <template if:true={isFilterSelected}>
+    <lightning-layout-item size="3" padding="around-small" >
         <lightning-button
             label="Download Report"
             onclick={downloadReport}
@@ -55,14 +65,12 @@
         >
         </lightning-button>
     </lightning-layout-item>
-        </lightning-layout>
-         
+</template>
             <lightning-datatable
                 key-field="Id"
                 data={filteredReportsData}
                 columns={columns}
                 hide-checkbox-column="true">
             </lightning-datatable> 
-         
     </lightning-card>
 </template>

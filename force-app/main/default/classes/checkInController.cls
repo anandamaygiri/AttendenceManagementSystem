@@ -7,7 +7,7 @@ public with sharing class checkInController {
                 SELECT Id,CheckInTime__c,CheckOutTime__c
                 FROM Attendence_Details__c
                 WHERE CheckOutTime__c = null
-                AND CreatedById = :recordId 
+                AND CreatedById = :recordId  
             ];
             
             if (!existingRecords.isEmpty()) {

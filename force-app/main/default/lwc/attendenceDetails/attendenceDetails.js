@@ -28,7 +28,7 @@ typeAttributes:{
     month:'short',
     year:'numeric',
     hour:'2-digit',
-    minute:'2-digit', 
+    minute:'2-digit',  
     second:'2-digit',
     hour12:true}},
 {label: "Working Hours",fieldName: "Working_Hours__c",type: 'customTimeFormatter'}
@@ -41,8 +41,8 @@ export default class AttendenceDetails extends LightningElement {
     @track attendenceList=[];
     @track visibleAttendences=[]
     timer
-    filterBy 
-    filterValue
+    @track filterBy 
+    @track filterValue='';
     @track isFilterSelected=false
     @wire(getAttendence, { recordId: "$user_id", fields: [profile] })
     wireAttendenceDetails(result) {
@@ -63,7 +63,7 @@ export default class AttendenceDetails extends LightningElement {
     get filterByOptions() {
         return [
             { label: 'Employee Name', value: 'Employee_Name__c' },
-            { label: 'Check In date', value: 'CheckInTime__c' }
+            { label: 'Date', value: 'CheckInTime__c' }
         ];
     }
 
