@@ -48,4 +48,53 @@ public class GlobalReportsController {
 
         return new List<Map<String, Object>>(DateToRecordMap.values());
     }
+
+
+    public class WrapData {
+        @AuraEnabled public String xAxis;
+        @AuraEnabled public Integer yAxisForAttendence = 0;
+        @AuraEnabled public Integer yAxisForTask = 0;
+        @AuraEnabled public Integer yAxisForLeave = 0;
+    }
+
+    @AuraEnabled(Cacheable=true)
+    public static List<WrapData> getChartValue() {
+        Map<String,WrapData> dataMap = new Map<String,WrapData>();
+
+         List<AggregateResult> attendenceResults = [SELECT CALENDAR_MONTH(CreatedDate) month, COUNT(Id) cnt
+                                                        FROM Attendence_Details__c GROUP BY CALENDAR_MONTH(CreatedDate)];
+        for(AggregateResult ar:attendenceResults){
+            String month = String.valueOf(ar.get('month'));
+            Integer count = Integer.valueOf(ar.get('cnt'));
+            if(!dataMap.containsKey(month)){
+                dataMap.put(month, new WrapData());
+                dataMap.get(month).xAxis = month;
+            }
+            dataMap.get(month).yAxisForAttendence = count;
+        }
+
+        List<AggregateResult> taskResults = [SELECT CALENDAR_MONTH(CreatedDate) month, COUNT(Id) cnt 
+                                                FROM Task__c GROUP BY CALENDAR_MONTH(CreatedDate)];
+        for(AggregateResult ar:taskResults){
+            String month = String.valueOf(ar.get('month'));
+            Integer count = Integer.valueOf(ar.get('cnt'));
+            if(!dataMap.containsKey(month)){
+                dataMap.put(month, new WrapData());
+                dataMap.get(month).xAxis = month;
+            }
+            dataMap.get(month).yAxisForTask = count;
+        }
+        List<AggregateResult> leaveResults = [SELECT CALENDAR_MONTH(CreatedDate) month, COUNT(Id) cnt
+                                                FROM Leave_Request__c GROUP BY CALENDAR_MONTH(CreatedDate)];
+        for(AggregateResult ar:leaveResults){
+            String month = String.valueOf(ar.get('month'));
+            Integer count = Integer.valueOf(ar.get('cnt'));
+            if(!dataMap.containsKey(month)){
+                dataMap.put(month, new WrapData());
+                dataMap.get(month).xAxis = month;
+            }
+            dataMap.get(month).yAxisForLeave = count;
+        }
+        return dataMap.values();
+    }
 }
