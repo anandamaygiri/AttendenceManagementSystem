@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Attedence, Task And Leave Report" icon-name="utility:graph">
+        <div class="slds-p-right_large">
+          <div if:true={isChartJsInitialized}>
+            <canvas class="linechart" lwc:dom="manual" height=110%></canvas>
+          </div>
+        </div>
+      </lightning-card>
+    
+</template>
