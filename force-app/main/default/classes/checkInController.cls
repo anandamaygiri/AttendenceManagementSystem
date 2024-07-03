@@ -45,8 +45,8 @@ public with sharing class checkInController {
             SELECT Id FROM Leave_Request__c 
             WHERE CreatedById = :userId 
             AND Approval_Status__c = 'Approved' 
-            AND Start_Date__c <= :today 
-            AND End_Date__c >= :today
+            AND Start_Date__c = :today 
+             
         ];
         return leaveRequests.size() > 0;
     }

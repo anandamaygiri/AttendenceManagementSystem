@@ -75,7 +75,7 @@ export default class GlobalReports extends LightningElement {
     user_Id=userId;
     columns = columns
     @track reportsData =  [];
-    selectedDomain='';
+    @track selectedDomain='';
     @track filteredReportsData=[];
     @track filterBy =''
     @track filterValue =''
@@ -140,7 +140,7 @@ export default class GlobalReports extends LightningElement {
     }
     handleDomainChange(event){
         this.selectedDomain = event.detail.value;
-       // this.filterReportsData();
+        //this.filterReportsData();
         
     }
     handleMonthChange(event) {
