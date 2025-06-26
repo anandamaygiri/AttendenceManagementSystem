@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_of_SSC_board__c</fullName>
+    <externalId>false</externalId>
+    <label>Name of SSC board</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bihar School Examination Board (BSEB)</fullName>
+                <default>false</default>
+                <label>Bihar School Examination Board (BSEB)</label>
+            </value>
+            <value>
+                <fullName>Board of High School and Intermediate Education Uttar Pradesh (UPMSP)</fullName>
+                <default>false</default>
+                <label>Board of High School and Intermediate Education Uttar Pradesh (UPMSP)</label>
+            </value>
+            <value>
+                <fullName>Board of School Education Haryana (BSEH)</fullName>
+                <default>false</default>
+                <label>Board of School Education Haryana (BSEH)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Andhra Pradesh (BSEAP)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Andhra Pradesh (BSEAP)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Assam (SEBA)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Assam (SEBA)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Madhya Pradesh (MPBSE)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Madhya Pradesh (MPBSE)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Manipur (BSEM)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Manipur (BSEM)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Odisha (BSE Odisha)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Odisha (BSE Odisha)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Rajasthan (RBSE)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Rajasthan (RBSE)</label>
+            </value>
+            <value>
+                <fullName>Board of Secondary Education, Telangana (BSE Telangana)</fullName>
+                <default>false</default>
+                <label>Board of Secondary Education, Telangana (BSE Telangana)</label>
+            </value>
+            <value>
+                <fullName>Central Board of Secondary Education (CBSE) Delhi</fullName>
+                <default>false</default>
+                <label>Central Board of Secondary Education (CBSE) Delhi</label>
+            </value>
+            <value>
+                <fullName>Chhattisgarh Board of Secondary Education (CGBSE)</fullName>
+                <default>false</default>
+                <label>Chhattisgarh Board of Secondary Education (CGBSE)</label>
+            </value>
+            <value>
+                <fullName>Directorate of School Education, Arunachal Pradesh</fullName>
+                <default>false</default>
+                <label>Directorate of School Education, Arunachal Pradesh</label>
+            </value>
+            <value>
+                <fullName>Goa Board of Secondary and Higher Secondary Education (GBSHSE)</fullName>
+                <default>false</default>
+                <label>Goa Board of Secondary and Higher Secondary Education (GBSHSE)</label>
+            </value>
+            <value>
+                <fullName>Gujarat Secondary and Higher Secondary Education Board (GSEB)</fullName>
+                <default>false</default>
+                <label>Gujarat Secondary and Higher Secondary Education Board (GSEB)</label>
+            </value>
+            <value>
+                <fullName>Himachal Pradesh Board of School Education (HPBOSE)</fullName>
+                <default>false</default>
+                <label>Himachal Pradesh Board of School Education (HPBOSE)</label>
+            </value>
+            <value>
+                <fullName>Jharkhand Academic Council (JAC)</fullName>
+                <default>false</default>
+                <label>Jharkhand Academic Council (JAC)</label>
+            </value>
+            <value>
+                <fullName>Karnataka Secondary Education Examination Board (KSEEB)</fullName>
+                <default>false</default>
+                <label>Karnataka Secondary Education Examination Board (KSEEB)</label>
+            </value>
+            <value>
+                <fullName>Kerala Board of Public Examinations (KBPE)</fullName>
+                <default>false</default>
+                <label>Kerala Board of Public Examinations (KBPE)</label>
+            </value>
+            <value>
+                <fullName>Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)</fullName>
+                <default>false</default>
+                <label>Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE)</label>
+            </value>
+            <value>
+                <fullName>Meghalaya Board of School Education (MBOSE)</fullName>
+                <default>false</default>
+                <label>Meghalaya Board of School Education (MBOSE)</label>
+            </value>
+            <value>
+                <fullName>Mizoram Board of School Education (MBSE)</fullName>
+                <default>false</default>
+                <label>Mizoram Board of School Education (MBSE)</label>
+            </value>
+            <value>
+                <fullName>Nagaland Board of School Education (NBSE)</fullName>
+                <default>false</default>
+                <label>Nagaland Board of School Education (NBSE)</label>
+            </value>
+            <value>
+                <fullName>Punjab School Education Board (PSEB)</fullName>
+                <default>false</default>
+                <label>Punjab School Education Board (PSEB)</label>
+            </value>
+            <value>
+                <fullName>Sikkim Board of Secondary Education</fullName>
+                <default>false</default>
+                <label>Sikkim Board of Secondary Education</label>
+            </value>
+            <value>
+                <fullName>Tamil Nadu State Board of School Examination (TN SSLC)</fullName>
+                <default>false</default>
+                <label>Tamil Nadu State Board of School Examination (TN SSLC)</label>
+            </value>
+            <value>
+                <fullName>Tripura Board of Secondary Education (TBSE)</fullName>
+                <default>false</default>
+                <label>Tripura Board of Secondary Education (TBSE)</label>
+            </value>
+            <value>
+                <fullName>Uttarakhand Board of School Education (UBSE)</fullName>
+                <default>false</default>
+                <label>Uttarakhand Board of School Education (UBSE)</label>
+            </value>
+            <value>
+                <fullName>West Bengal Board of Secondary Education (WBBSE)</fullName>
+                <default>false</default>
+                <label>West Bengal Board of Secondary Education (WBBSE)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

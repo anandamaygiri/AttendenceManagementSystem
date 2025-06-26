@@ -1,0 +1,78 @@
+<!-- associateForm.html -->
+<template>
+    <div class="container">
+        <template if:false={isRecordIdAvailable}>
+        <!-- Heading -->
+        <h1 class="heading">PCS GLOBAL PVT Limited</h1>
+        <h2 class="sub-heading">Web Development, Consultant, IT Security</h2>
+        <h3 class="address">Corporate Head Office</h3>
+        <p class="address">Primarc Tower, DN-36, 11th Floor, Suite No-1101, Sector V, Salt Lake Kolkata-91</p>
+
+        <!-- Personal Information -->
+        <lightning-card title="PERSONAL INFORMATION">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2 slds-p-horizontal_small">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+                    <div class=”slds-form-element__control”>
+                    <lightning-input name="Name" class="validate" value={Name} type="text" onchange={handleInputChange} label="Name :" required></lightning-input>
+                    <template if:true={personalInfoRecord.errors.Name}>
+                        <div class="slds-text-color_error">{personalInfoRecord.errors.Name}</div>
+                    </template><br>
+                    <lightning-input name="FatherName" class="validate"  value={fatherName} type="text" onchange={handleInputChange} label="Father Name :" required></lightning-input><br>
+                    <lightning-input name="PresentAddress" calss="validate"  value={presentAddress} type="text" onchange={handleInputChange} label="Present Address:" required></lightning-input><br>
+                    <lightning-input name="ContactNumber" class="validate"  value={contactNumber} type="Phone" onchange={handleInputChange} label="Contact No:" required></lightning-input><br>
+                    <lightning-input name="WhatsAppNumber" class="validate" value={whatsappNumber} type="Phone" onchange={handleInputChange} label="What's App No:" required></lightning-input><br>
+                    <lightning-combobox name="Gender" label="Gender" value={gender} placeholder="select gender" options={options} onchange={handleInputChange} required></lightning-combobox><br>
+                    <lightning-combobox name="Religion" label="Religion" value={religion} placeholder="select Religion" options={religionOptions} onchange={handleInputChange} ></lightning-combobox><br>
+                    <lightning-input name="Aadhar"  value={aadhaarNumber} onchange={handleInputChange} class="validate" type="Text" label="Aadhar Card Number :" required></lightning-input>
+                    <template if:true={personalInfoRecord.errors.aadhaarNumber}>
+                        <div class="slds-text-color_error">{personalInfoRecord.errors.aadhaarNumber}</div>
+                    </template><br>
+                    <lightning-input name="Pan"  value={panNumber} onchange={handleInputChange} class="validate" type="Text" label="Pan Card No :" required></lightning-input>
+                    <template if:true={personalInfoRecord.errors.panNumber}>
+                        <div class="slds-text-color_error">{personalInfoRecord.errors.panNumber}</div>
+                    </template><br>
+                    </div>
+                </div>
+                </div>
+                    <div class="slds-col slds-size_1-of-2 slds-p-horizontal_small">
+                        <div class="slds-form-element slds-form-element_horizontal">
+                            <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+                        <div class=”slds-form-element__control”>
+                        <lightning-input name="Email" class="validate" type="email"  value={email} label="Email Id :" onchange={handleInputChange} required></lightning-input><br>
+                        <lightning-input name="MotherName" class="validate"  value={motherName} type="text" onchange={handleInputChange} label="Mother Name:" required></lightning-input><br>
+                        <lightning-input name="permananentAddress" calss="validate"  value={permananentAddress} type="text" onchange={handleInputChange} label="Permanent Address :" required></lightning-input><br>
+                        <lightning-input name="altContactNumber"  value={altContactNumber} class="validate" onchange={handleInputChange} type="Phone" label="Alternative Contact No :"></lightning-input><br>
+                        <lightning-input name="ParentsContact" class="validate"  value={parentContactNumber} type="Phone" onchange={handleInputChange} label="Parent's Contact No :" required></lightning-input><br>
+                        <lightning-input name="DOB" type="Date" value={dateOfBirth} onchange={handleInputChange} label="Date of Birth :" required></lightning-input><br>
+                        <lightning-combobox name="BloodGroup" label="Blood Group :" value={bloodGroup} placeholder="select blood group" options={bloodOptions} onchange={handleInputChange}></lightning-combobox><br>
+                        <lightning-input name="VoterId"  value={voterIdNumber} onchange={handleInputChange} class="validate" type="Text" label="Voter Card No :" ></lightning-input><br>
+                        <lightning-input name="Passport"  value={passportNumber} onchange={handleInputChange} class="validate" type="Text" label="Passport No :"></lightning-input><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center slds-grid_align-spread">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="file" accept=".png, .jpg, .jpeg" label="Select Image" onchange={openfileUpload}></lightning-input><br>
+                    <span lwc:if={fileData.filename} class="slds-p-left_small">{fileData.filename}</span>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <template if:true={imagePreviewUrl}>
+                        <img src={imagePreviewUrl} alt="Image Preview" style="max-width: 100%;"/>
+                    </template>
+                </div>
+            </div>
+        <div class="reservation-button">
+            <button onclick={handleClick} >Save</button>
+        </div>   
+    </lightning-card>
+</template>
+
+    <template if:true={isRecordIdAvailable}>
+        <c-familybackground record-id={recordId}></c-familybackground>
+    </template> 
+
+</div>      
+</template>

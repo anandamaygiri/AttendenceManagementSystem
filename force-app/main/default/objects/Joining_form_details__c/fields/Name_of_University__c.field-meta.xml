@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_of_University__c</fullName>
+    <externalId>false</externalId>
+    <label>Name of University</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jawaharlal Nehru Technological University (JNTU), Kakinada</fullName>
+                <default>false</default>
+                <label>Jawaharlal Nehru Technological University (JNTU), Kakinada</label>
+            </value>
+            <value>
+                <fullName>Andhra University, Visakhapatnam</fullName>
+                <default>false</default>
+                <label>Andhra University, Visakhapatnam</label>
+            </value>
+            <value>
+                <fullName>Sri Venkateswara University, Tirupati</fullName>
+                <default>false</default>
+                <label>Sri Venkateswara University, Tirupati</label>
+            </value>
+            <value>
+                <fullName>Maharashtra State Board of Technical Education (MSBTE)</fullName>
+                <default>false</default>
+                <label>Maharashtra State Board of Technical Education (MSBTE)</label>
+            </value>
+            <value>
+                <fullName>Veermata Jijabai Technological Institute (VJTI), Mumbai</fullName>
+                <default>false</default>
+                <label>Veermata Jijabai Technological Institute (VJTI), Mumbai</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic Mumbai</fullName>
+                <default>false</default>
+                <label>Government Polytechnic Mumbai</label>
+            </value>
+            <value>
+                <fullName>Department of Technical Education (DTE), Karnataka</fullName>
+                <default>false</default>
+                <label>Department of Technical Education (DTE), Karnataka</label>
+            </value>
+            <value>
+                <fullName>RV College of Engineering, Bangalore</fullName>
+                <default>false</default>
+                <label>RV College of Engineering, Bangalore</label>
+            </value>
+            <value>
+                <fullName>PES University, Bangalore</fullName>
+                <default>false</default>
+                <label>PES University, Bangalore</label>
+            </value>
+            <value>
+                <fullName>Directorate of Technical Education (DoTE), Tamil Nadu</fullName>
+                <default>false</default>
+                <label>Directorate of Technical Education (DoTE), Tamil Nadu</label>
+            </value>
+            <value>
+                <fullName>PSG Polytechnic College, Coimbatore</fullName>
+                <default>false</default>
+                <label>PSG Polytechnic College, Coimbatore</label>
+            </value>
+            <value>
+                <fullName>Sri Krishna Polytechnic College, Coimbatore</fullName>
+                <default>false</default>
+                <label>Sri Krishna Polytechnic College, Coimbatore</label>
+            </value>
+            <value>
+                <fullName>Gujarat Technological University (GTU), Ahmedabad</fullName>
+                <default>false</default>
+                <label>Gujarat Technological University (GTU), Ahmedabad</label>
+            </value>
+            <value>
+                <fullName>Nirma University, Ahmedabad</fullName>
+                <default>false</default>
+                <label>Nirma University, Ahmedabad</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic Ahmedabad</fullName>
+                <default>false</default>
+                <label>Government Polytechnic Ahmedabad</label>
+            </value>
+            <value>
+                <fullName>Board of Technical Education Uttar Pradesh (BTEUP)</fullName>
+                <default>false</default>
+                <label>Board of Technical Education Uttar Pradesh (BTEUP)</label>
+            </value>
+            <value>
+                <fullName>Harcourt Butler Technical University (HBTU), Kanpur</fullName>
+                <default>false</default>
+                <label>Harcourt Butler Technical University (HBTU), Kanpur</label>
+            </value>
+            <value>
+                <fullName>Bundelkhand University, Jhansi</fullName>
+                <default>false</default>
+                <label>Bundelkhand University, Jhansi</label>
+            </value>
+            <value>
+                <fullName>Delhi Skill and Entrepreneurship University (DSEU)</fullName>
+                <default>false</default>
+                <label>Delhi Skill and Entrepreneurship University (DSEU)</label>
+            </value>
+            <value>
+                <fullName>Indira Gandhi National Open University (IGNOU)</fullName>
+                <default>false</default>
+                <label>Indira Gandhi National Open University (IGNOU)</label>
+            </value>
+            <value>
+                <fullName>Delhi Technological University (DTU)</fullName>
+                <default>false</default>
+                <label>Delhi Technological University (DTU)</label>
+            </value>
+            <value>
+                <fullName>West Bengal State Council of Technical Education (WBSCTE)</fullName>
+                <default>false</default>
+                <label>West Bengal State Council of Technical Education (WBSCTE)</label>
+            </value>
+            <value>
+                <fullName>Jadavpur University, Kolkata</fullName>
+                <default>false</default>
+                <label>Jadavpur University, Kolkata</label>
+            </value>
+            <value>
+                <fullName>Maulana Abul Kalam Azad University of Technology (MAKAUT), Kolkata</fullName>
+                <default>false</default>
+                <label>Maulana Abul Kalam Azad University of Technology (MAKAUT), Kolkata</label>
+            </value>
+            <value>
+                <fullName>Punjab State Board of Technical Education and Industrial Training (PSBTE &amp; IT)</fullName>
+                <default>false</default>
+                <label>Punjab State Board of Technical Education and Industrial Training (PSBTE &amp; IT)</label>
+            </value>
+            <value>
+                <fullName>Punjab Polytechnic College, Mohali</fullName>
+                <default>false</default>
+                <label>Punjab Polytechnic College, Mohali</label>
+            </value>
+            <value>
+                <fullName>Guru Nanak Dev University (GNDU), Amritsar</fullName>
+                <default>false</default>
+                <label>Guru Nanak Dev University (GNDU), Amritsar</label>
+            </value>
+            <value>
+                <fullName>Board of Technical Education Rajasthan (BTER)</fullName>
+                <default>false</default>
+                <label>Board of Technical Education Rajasthan (BTER)</label>
+            </value>
+            <value>
+                <fullName>Rajasthan Technical University (RTU), Kota</fullName>
+                <default>false</default>
+                <label>Rajasthan Technical University (RTU), Kota</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic College, Jaipur</fullName>
+                <default>false</default>
+                <label>Government Polytechnic College, Jaipur</label>
+            </value>
+            <value>
+                <fullName>Haryana State Board of Technical Education (HSBTE)</fullName>
+                <default>false</default>
+                <label>Haryana State Board of Technical Education (HSBTE)</label>
+            </value>
+            <value>
+                <fullName>Guru Jambheshwar University of Science and Technology, Hisar</fullName>
+                <default>false</default>
+                <label>Guru Jambheshwar University of Science and Technology, Hisar</label>
+            </value>
+            <value>
+                <fullName>Deenbandhu Chhotu Ram University of Science and Technology, Murthal</fullName>
+                <default>false</default>
+                <label>Deenbandhu Chhotu Ram University of Science and Technology, Murthal</label>
+            </value>
+            <value>
+                <fullName>State Council for Technical Education &amp; Vocational Training (SCTE&amp;VT), Odisha</fullName>
+                <default>false</default>
+                <label>State Council for Technical Education &amp; Vocational Training (SCTE&amp;VT), Odisha</label>
+            </value>
+            <value>
+                <fullName>KIIT University, Bhubaneswar</fullName>
+                <default>false</default>
+                <label>KIIT University, Bhubaneswar</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic Bhubaneswar</fullName>
+                <default>false</default>
+                <label>Government Polytechnic Bhubaneswar</label>
+            </value>
+            <value>
+                <fullName>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal</fullName>
+                <default>false</default>
+                <label>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic College, Bhopal</fullName>
+                <default>false</default>
+                <label>Government Polytechnic College, Bhopal</label>
+            </value>
+            <value>
+                <fullName>Institute of Engineering &amp; Technology, DAVV, Indore</fullName>
+                <default>false</default>
+                <label>Institute of Engineering &amp; Technology, DAVV, Indore</label>
+            </value>
+            <value>
+                <fullName>Bihar State Board of Technical Education (BSBTE)</fullName>
+                <default>false</default>
+                <label>Bihar State Board of Technical Education (BSBTE)</label>
+            </value>
+            <value>
+                <fullName>Patna University, Patna</fullName>
+                <default>false</default>
+                <label>Patna University, Patna</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic, Patna</fullName>
+                <default>false</default>
+                <label>Government Polytechnic, Patna</label>
+            </value>
+            <value>
+                <fullName>State Board of Technical Education and Training (SBTET), Telangana</fullName>
+                <default>false</default>
+                <label>State Board of Technical Education and Training (SBTET), Telangana</label>
+            </value>
+            <value>
+                <fullName>Jawaharlal Nehru Technological University (JNTU), Hyderabad</fullName>
+                <default>false</default>
+                <label>Jawaharlal Nehru Technological University (JNTU), Hyderabad</label>
+            </value>
+            <value>
+                <fullName>Osmania University, Hyderabad</fullName>
+                <default>false</default>
+                <label>Osmania University, Hyderabad</label>
+            </value>
+            <value>
+                <fullName>Board of Technical Education, Kerala</fullName>
+                <default>false</default>
+                <label>Board of Technical Education, Kerala</label>
+            </value>
+            <value>
+                <fullName>Government Polytechnic College, Thiruvananthapuram</fullName>
+                <default>false</default>
+                <label>Government Polytechnic College, Thiruvananthapuram</label>
+            </value>
+            <value>
+                <fullName>National Institute of Technology (NIT), Calicut</fullName>
+                <default>false</default>
+                <label>National Institute of Technology (NIT), Calicut</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

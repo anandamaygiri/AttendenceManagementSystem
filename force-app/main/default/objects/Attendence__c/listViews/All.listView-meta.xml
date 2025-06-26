@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>All</fullName>
-    <columns>CREATED_DATE</columns>
     <columns>NAME</columns>
+    <columns>Employee_ID__c</columns>
+    <columns>Email_Id__c</columns>
     <columns>Domain__c</columns>
     <columns>Date_Of_Joining__c</columns>
-    <columns>Email_Id__c</columns>
     <filterScope>ScopingRule</filterScope>
     <label>All</label>
 </ListView>

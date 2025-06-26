@@ -1,4 +1,4 @@
-    const exportCSVFile = (headers, items, fileTitle) => {
+const exportCSVFile = (headers, items, fileTitle) => {
         if (!items || !items.length) {
             return;
         }

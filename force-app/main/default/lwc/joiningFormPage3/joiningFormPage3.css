@@ -1,0 +1,116 @@
+/* associateForm.css */
+.container {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow for better contrast */
+    outline: 2px solid #000; /* Black outline */
+    outline-offset: -5px; /* Adjust the outline position */
+}
+
+.sub-heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.address {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+/* styles.css */
+.declaration-section {
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.checkbox-group label {
+    margin-right:50px;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 15'%3E%3Cpath d='M0 0l15 15l15-15H0z' fill='%23cccccc'/%3E%3C/svg%3E") no-repeat right #ffffff;
+    background-size: 15px 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}.reservation-button button {
+    background-color: #007bff; /* Change button color to blue */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Add padding */
+    margin-top: 20px; /* Add space from the top */
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Center the button horizontally */
+    cursor: pointer; /* Add pointer cursor */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Optional hover effect */
+.reservation-button button:hover {
+    background-color: darkblue;
+}

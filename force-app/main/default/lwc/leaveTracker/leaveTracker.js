@@ -13,7 +13,9 @@ const columns = [
     {label: "Leave Type",fieldName: "Leave_Type__c"},
     {label: "Reason for Leave",fieldName: "Reason_For_Leave__c"},
     {label: "Total Leave",fieldName: "Count_Leave_Day__c"},
-    {label: "Approval Status",fieldName: "Approval_Status__c" }
+    {label: "Approval Status",fieldName: "Approval_Status__c", cellAttributes:{
+        class:{fieldName: 'rowColor'}
+    }},
     ];
 
 export default class LeaveTracker extends LightningElement {

@@ -1,0 +1,68 @@
+<template>
+    <template if:false={isRecordIdAvailable}>
+        <!-- Heading -->
+        <h1 class="heading">PCS GLOBAL PVT Limited</h1>
+        <h2 class="sub-heading">Web Development, Consultant, IT Security</h2>
+        <h3 class="address">Corporate Head Office</h3>
+        <p class="address">Primarc Tower, DN-36, 11th Floor, Suite No-1101, Sector V, Salt Lake Kolkata-91</p>
+
+<!-- Languages Known -->
+    
+    <lightning-card title="LANGUAGE KNOWN">
+        <div class="slds-form-element slds-form-element_horizontal">
+            <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+        <div class=”slds-form-element__control”>
+            <lightning-dual-listbox
+                name="speak"
+                label="Speak"
+                source-label="Available"
+                selected-label="Selected"
+                field-level-help="Choose your options"
+                options={options}
+                value={speak}
+                onchange={handleInputChange}>
+            </lightning-dual-listbox>
+            <br>
+            <lightning-dual-listbox
+                name="read"
+                label="Read"
+                source-label="Available"
+                selected-label="Selected"
+                field-level-help="Choose your options"
+                options={options}
+                value={read}
+                onchange={handleInputChange}>
+            </lightning-dual-listbox>
+            <br>
+            <lightning-dual-listbox
+                name="write"
+                label="Write"
+                source-label="Available"
+                selected-label="Selected"
+                field-level-help="Choose your options"
+                options={options}
+                value={write}
+                onchange={handleInputChange}>
+            </lightning-dual-listbox>
+            <br>
+        </div>
+        </div>
+</lightning-card>
+            <lightning-card title="EXTRA CARRICULAM">
+                <div class="slds-form-element slds-form-element_horizontal">
+                    <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+                <div class=”slds-form-element__control”>
+            <lightning-input name="games" class="validate" type="text" label="Games" onchange={handleInputChange}></lightning-input><br>
+            <lightning-input name="socialActivities" class="validate" type="text" label="Social Activities" onchange={handleInputChange}></lightning-input><br>
+            <lightning-input name="hobbies" class="validate" type="text" label="Hobbies" onchange={handleInputChange}></lightning-input><br>
+            </div>
+            </div>   
+            <div class="reservation-button">
+                <button onclick={handleClick} >Save></button>
+            </div> 
+            </lightning-card>
+        </template>
+            <template if:true={isRecordIdAvailable}>
+                <c-bankdetails record-id={recordId}></c-bankdetails>
+            </template>
+</template>

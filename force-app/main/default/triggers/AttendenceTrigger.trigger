@@ -1,8 +1,8 @@
-trigger AttendenceTrigger on Attendence__c (after insert) {
-    if(Trigger.isInsert){
-        if(Trigger.isAfter){
-            //AttendenceTriggerHandler.createWpt(Trigger.new);
-            AttendenceTriggerHandler.sendEmailNotification(Trigger.new);
-        }
+trigger AttendenceTrigger on Attendence__c (before insert,after insert) {
+    if (Trigger.isInsert && Trigger.isAfter) {
+        AttendenceTriggerHandler.sendEmailNotification(Trigger.new);
+    }
+    if (Trigger.isInsert && Trigger.isBefore) {
+        //AttendenceTriggerHandler.preventAttendence(Trigger.new);
     }
 }

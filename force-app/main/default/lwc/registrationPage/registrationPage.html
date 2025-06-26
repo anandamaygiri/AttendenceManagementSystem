@@ -1,0 +1,36 @@
+<template>
+    <template if:true={isPage1}>
+        <c-joining-Form oninputchange={handleInputChange}></c-joining-Form>
+    </template>
+    <template if:true={isPage2}>
+        <c-familybackground oninputchange={handleInputChange}></c-familybackground>
+    </template>
+    <template if:true={isPage3}>
+        <c-joining-Form-Page2 oninputchange={handleInputChange}></c-joining-Form-Page2>
+    </template>
+    <template if:true={isPage4}>
+        <c-hsc oninputchange={handleInputChange}></c-hsc>
+    </template>
+    <template if:true={isPage5}>
+        <c-diploma oninputchange={handleInputChange}></c-diploma>
+    </template>
+    <template if:true={isPage6}>
+        <c-graduation oninputchange={handleInputChange}></c-graduation>
+    </template>
+    <template if:true={isPage7}>
+        <c-postgraduation oninputchange={handleInputChange}></c-postgraduation>
+    </template>
+    <template if:true={isPage8}>
+        <c-joining-Form-Page3 oninputchange={handleInputChange}></c-joining-Form-Page3>
+    </template>
+    <template if:true={isPage9}>
+        <c-bankdetails oninputchange={handleInputChange}></c-bankdetails>
+    </template>
+
+    <c-from-controller current-page={currentPage} total-pages={totalPages} onpagechange={handlePageChange}></c-from-controller>
+
+    <div class="slds-m-top_medium">
+        <lightning-button label="Submit" onclick={handleSubmit} class="slds-m-right_small"></lightning-button>
+    </div>
+    
+</template>

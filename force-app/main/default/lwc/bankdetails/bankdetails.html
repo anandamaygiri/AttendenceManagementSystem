@@ -1,0 +1,30 @@
+<template>
+        <!-- Heading -->
+        <h1 class="heading">PCS GLOBAL PVT Limited</h1>
+        <h2 class="sub-heading">Web Development, Consultant, IT Security</h2>
+        <h3 class="address">Corporate Head Office</h3>
+        <p class="address">Primarc Tower, DN-36, 11th Floor, Suite No-1101, Sector V, Salt Lake Kolkata-91</p>
+    <!-- Bank Details for Stipend -->
+    <lightning-card title="BANK DETAILS">
+        <div class="slds-form-element slds-form-element_horizontal">
+            <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+        <div class=”slds-form-element__control”>
+        <!-- Add fields for Bank Details for Stipend -->
+        <lightning-input name="accountholderName" class="validate" type="text" label="Account Holder Name" onchange={handleInputChange} required></lightning-input><br>
+        <lightning-input name="IFSCcode" class="validate" type="text" label="IFSC Code" onchange={handleInputChange} required></lightning-input>
+        <template if:true={bankRecord.errors.IFSCcode}>
+            <div class="slds-text-color_error">{bankRecord.errors.IFSCcode}</div>
+        </template><br>
+        <lightning-input name="branchName" class="validate" type="text" label="Branch Name" onchange={handleInputChange} required></lightning-input><br>
+        <lightning-input name="accountNumber" class="validate" type="text" label="Account Number" onchange={handleInputChange} required></lightning-input>
+        <template if:true={bankRecord.errors.accountNumber}>
+            <div class="slds-text-color_error">{bankRecord.errors.accountNumber}</div>
+        </template><br>
+        <lightning-input name="bankName" class="validate" type="text" label="Bank Name" onchange={handleInputChange} required></lightning-input><br>
+    </div>
+    </div>
+    <div class="reservation-button">
+        <button onclick={handleClick} >Submit</button>
+    </div>
+</lightning-card>
+</template>

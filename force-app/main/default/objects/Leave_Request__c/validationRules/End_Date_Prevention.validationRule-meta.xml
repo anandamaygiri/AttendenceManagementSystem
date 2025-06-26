@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_Prevention</fullName>
+    <active>true</active>
+    <errorConditionFormula>End_Date__c  &lt;  TODAY()</errorConditionFormula>
+    <errorDisplayField>End_Date__c</errorDisplayField>
+    <errorMessage>Date must be greater than to day&apos;s Date</errorMessage>
+</ValidationRule>

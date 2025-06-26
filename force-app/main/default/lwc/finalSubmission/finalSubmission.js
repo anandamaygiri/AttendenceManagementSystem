@@ -36,7 +36,7 @@ checkButtonVisibility() {
 
     // Define the start and end time for button visibility
     const startTime = new Date(); // Replace this with your desired start time
-    startTime.setHours(7); // Example: 8 AM
+    startTime.setHours(17); // Example: 8 AM
     startTime.setMinutes(0);
     startTime.setSeconds(0);
 

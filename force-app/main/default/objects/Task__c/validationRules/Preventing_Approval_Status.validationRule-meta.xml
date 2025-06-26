@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preventing_Approval_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+
+     TEXT(PRIORVALUE(Approval_Status__c))= &apos;Approved&apos;,
+
+     TEXT(Approval_Status__c) =&apos;Pending&apos;
+
+)</errorConditionFormula>
+    <errorMessage>&quot;The record cannot be submitted for approval again&quot;</errorMessage>
+</ValidationRule>

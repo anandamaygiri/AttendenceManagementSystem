@@ -1,0 +1,57 @@
+<!-- associateForm.html -->
+<template>
+    <!--<div class="container">-->
+        <template if:false={isRecordIdAvailable}> 
+        <!-- Heading -->
+        <h1 class="heading">PCS GLOBAL PVT Limited</h1>
+        <h2 class="sub-heading">Web Development, Consultant, IT Security</h2>
+        <h3 class="address">Corporate Head Office</h3>
+        <p class="address">Primarc Tower, DN-36, 11th Floor, Suite No-1101, Sector V, Salt Lake Kolkata-91</p>
+
+        <!-- Family Background -->
+        <lightning-card title="FAMILY BACKGROUND">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2 slds-p-horizontal_small">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+                        <div class=”slds-form-element__control”>
+                        <!-- Add fields for Family Background -->
+                        <lightning-input name="fatherName" class="validate" value={fatherName} type="Text" onchange={handleInputChange} label="Father's Name" required></lightning-input><br>
+                        <lightning-input name="fatherAge" class="validate" value={fatherAge} type="Text" onchange={handleInputChange} label="Father's Age" required></lightning-input><br>
+                        <lightning-input name="fatherEducationOccupation" value={fatherEducationOccupation} onchange={handleInputChange}  type="text" label="Father's Occupation" required></lightning-input><br>
+                        <lightning-input name="brotherName" value={brotherName} type="Text" onchange={handleInputChange} label="Brother's Name"></lightning-input><br>
+                        <lightning-input name="brotherAge" value={brotherAge} type="Text" onchange={handleInputChange} label="Brother Age"></lightning-input><br>
+                        <lightning-input name="brotherEducationOccupation" value={brotherEducationOccupation} onchange={handleInputChange} type="Text" label="Brother Education/Occupation"></lightning-input><br>
+                        </div> 
+                    </div>
+                 </div>
+                <div class="slds-col slds-size_1-of-2 slds-p-horizontal_small">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class=”slds-form-element__labelslds-p-left—xx-small”></label>
+                    <div class=”slds-form-element__control”>
+                        <lightning-input name="motherName" value={motherName} type="Text" label="Mother's Name" onchange={handleInputChange} required></lightning-input><br>
+                        <lightning-input name="motherAge" value={motherAge} type="Text" label="Mother Age" onchange={handleInputChange} required></lightning-input><br>
+                        <lightning-input name="motherEducationOccupation" value={motherEducationOccupation} onchange={handleInputChange} type="Text" label="Mother Occupation" required></lightning-input><br>
+                        <lightning-input name="sisterName" value={sisterName} type="Text" onchange={handleInputChange} label="Sister's Name"></lightning-input><br>
+                        <lightning-input name="sisterAge" value={sisterAge} type="Text" onchange={handleInputChange} label="Sister Age"></lightning-input><br>
+                        <lightning-input name="sisterEducationOccupation" value={sisterEducationOccupation} type="Text" onchange={handleInputChange} label="Sister's Education"></lightning-input><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reservation-button">
+            <button onclick={handleClick} >Save</button>
+        </div>
+    </lightning-card>
+    </template>
+    <template if:true={isRecordIdAvailable}>
+        <c-joining-form-page2 record-id={recordId}></c-joining-form-page2>
+    </template>
+
+        <!-- Declaration -->
+        <!-- <h2 class="section-heading">DECLARATION</h2>
+        <div class="form-section">
+            <h2 >I hereby declare that I will obey the Code of Conduct and have understood the rules applicable to The Perennation Computer Solutions Global Pvt. Ltd. associate and do agree to abide by them.</h2>
+        </div>
+         -->   
+</template>
